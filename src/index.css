@@ -11,4 +11,8 @@
     @apply text-white border bg-emerald-600 border-emerald-600
     hover:bg-transparent hover:text-emerald-600 rounded-md
   }
+  
+  body{
+    @apply bg-gray-100
+  }
 }
