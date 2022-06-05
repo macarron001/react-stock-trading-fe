@@ -1,123 +1,32 @@
-// import React from "react"
-// import { useForm } from "react-hook-form"
-// import { yupResolver } from "@hookform/resolvers/yup"
-// import * as yup from "yup"
-// import { useEffect } from "react"
-// import axios from "axios"
+import React from 'react'
 
-// const schema = yup.object().shape({
-//   email: yup.string().email().required(),
-//   password: yup.string(),
-//   confirmedPassword: yup.string().oneOf([yup.ref("password"), null]),
-// })
+import register from '../../src/register.jpg'
+import logoImg from '../stockx.png'
 
-// const Register = () => {
-//   const {
-//     register,
-//     handleSubmit,
-//     getValues,
-//     formState: { errors, isSubmitSuccessful },
-//     setError,
-//   } = useForm({
-//     resolver: yupResolver(schema),
-//   })
-
-//   useEffect(() => {
-//     if (isSubmitSuccessful) {
-//       const values = getValues()
-//       axios({
-//         method: "post",
-//         headers: { "Content-Type": "application/json" },
-//         url: "http://localhost:3001/signup",
-//         data: {
-//           user: {
-//             email: values.email,
-//             password: values.password,
-//           },
-//         },
-//       })
-//         .then((res) => {
-//           console.log(res)
-//         })
-//         .catch((error) => {
-//           const { full_messages, ...errors } = error.response.data.errors
-//           Object.keys(errors).forEach((name) => {
-//             setError(name, {
-//               type: "manual",
-//               message: error.response.data.errors.full_messages[0],
-//             })
-//           })
-//         })
-//     }
-//   }, [isSubmitSuccessful])
-
-//   const onSubmit = (form, e) => {
-//     e.preventDefault()
-//   }
-
-//   return (
-//     <div className="wrapper">
-//       <header>
-//         <div></div>
-//         <div className="center-column">
-//           <h1>LOGO</h1>
-//         </div>
-//         <div className="right-column"></div>
-//       </header>
-//       <div className="main-register">
-//         <div className="sub-header-register">
-//           <h1>Let's set you up with an account first!</h1>
-//           <div>
-//           </div>
-//         </div>
-//         <div className="form-container-register">
-//           <form onSubmit={handleSubmit(onSubmit)} noValidate>
-//             <div>
-//               <input
-//                 required
-//                 type="email"
-//                 id="email"
-//                 name="email"
-//                 placeholder="email"
-//                 {...register("email")}
-//               ></input>
-//               <span>{errors.email?.message}</span>
-//               <input
-//                 required
-//                 type="password"
-//                 id="password"
-//                 name="password"
-//                 placeholder="password"
-//                 {...register("password")}
-//               ></input>
-//               <span>{errors.password?.message}</span>
-//               <input
-//                 required
-//                 type="password"
-//                 id="confirmedPassword"
-//                 name="confirmedPassword"
-//                 placeholder="confirm password"
-//                 {...register("confirmedPassword")}
-//               ></input>
-//               <span>
-//                 {errors.confirmedPassword && "password does not match"}
-//               </span>
-//             </div>
-//             <button className="btn-signup" type="submit">
-//               Sign Up
-//             </button>
-//           </form>
-//         </div>
-//       </div>
-//       <div className="registered">
-//         <p>Already got an account?</p>
-//         {/* <Link to="/slack-app">Sign in to an existing account</Link> */}
-//       </div>
-//       <footer>
-//         <div>© 2022 Ronny Pinoon</div>
-//       </footer>
-//     </div>
-//   )
-// }
-
-// export default Register
+export default function Login3() {
+  return (
+    <div className='w-full h-screen flex'>
+        <div className='grid grid-cols-1 md:grid-cols-2 m-auto h-[650px] shadow-lg shadow-gray-600 sm:max-w-[900px] rounded'>
+            <div className='w-full h-[650px] hidden md:block'>
+                <img className='w-full h-full rounded' src={register} alt="/" />
+            </div>
+            <div className='p-4 flex flex-col justify-around'>
+            <form className='max-w-[400px] w-full mx-auto bg-white p-4'>
+            <img className='object-scale-down h-20 w-40 mx-auto' src={logoImg} alt="/" />
+                <div className='flex flex-col py-2'>
+                    <input className='border p-2' type="text" placeholder='Email'/>
+                </div>
+                <div className='flex flex-col py-2'>
+                    <input className='border p-2' type="password" placeholder='Password' />
+                </div>
+                <div className='flex flex-col py-2'>
+                    <input className='border p-2' type="password" placeholder='Confirm Password' />
+                </div>
+                <button className='border w-full my-5 py-2 bg-emerald-600 hover:bg-emerald-300 text-white'>Register</button>
+            </form>
+                <p className='text-center'>Already have an account?</p>
+            </div>
+        </div>
+    </div>
+  )
+}
