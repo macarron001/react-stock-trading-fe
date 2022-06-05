@@ -55,9 +55,9 @@ const Portfolio = () => {
   ]
 
   return (
-    <div class="p-5 h-screen bg-gray-100">
+    <div className="p-5 h-screen bg-gray-100">
 
-      <div class="overflow-auto rounded-lg shadow hidden md:block">
+      <div className="overflow-auto rounded-lg shadow hidden md:block">
       <table class="w-full">
         <thead class="bg-gray-50 border-b-2 border-gray-200">
           <tr>
