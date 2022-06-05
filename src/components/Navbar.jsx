@@ -10,7 +10,8 @@ const Navbar = () => {
     const handleClose =()=> setNav(!nav)
 
   return (
-    <div className='w-screen h-[80px] z-10 bg-zinc-200 fixed drop-shadow-lg'>
+    // <div className='w-screen h-[80px] z-10 bg-zinc-200 fixed drop-shadow-lg'>
+    <div className='w-screen h-[80px] bg-zinc-200 drop-shadow-lg'>
       <div className='px-2 flex justify-between items-center w-full h-full'>
         <div className='flex items-center'>
         <img className='object-scale-down h-20 w-40 mr-4 py-2' src={logoImg} alt="/" />
