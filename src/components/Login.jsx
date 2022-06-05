@@ -12,7 +12,7 @@ export default function Login() {
 
         <div className='bg-gray-100 flex flex-col justify-center'>
             <form className='max-w-[400px] w-full mx-auto bg-white p-4'>
-            <img className='object-scale-down h-20 w-40 mr-4 py-2' src={logoImg} alt="/" />
+            <img className='object-scale-down h-20 w-40 mx-auto' src={logoImg} alt="/" />
                 <div className='flex flex-col py-2'>
                     <label>Username</label>
                     <input className='border p-2' type="text" />
