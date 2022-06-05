@@ -14,7 +14,7 @@ export default function Login() {
             <form className='max-w-[400px] w-full mx-auto bg-white p-4'>
             <img className='object-scale-down h-20 w-40 mx-auto' src={logoImg} alt="/" />
                 <div className='flex flex-col py-2'>
-                    <label>Username</label>
+                    <label>Email</label>
                     <input className='border p-2' type="text" />
                 </div>
                 <div className='flex flex-col py-2'>
