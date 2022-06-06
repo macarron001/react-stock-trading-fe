@@ -7,102 +7,126 @@ const Transactions = () => {
       quantity : 2,
       price : 2.00,
       type: 'buy',
-      date: '04/13/2009'
+      date: '04/13/2009',
+      total: 4.00
     },
     {
       symbol : 'BLH',
       quantity : 2,
       price : 2.00,
       type: 'buy',
-      date: '04/13/2009'
+      date: '04/13/2009',
+      total: 4.00
     },
     {
       symbol : 'GRW',
       quantity : 3,
       price : 2.00,
       type: 'buy',
-      date: '04/13/2009'
+      date: '04/13/2009',
+      total: 4.00
     },
     {
       symbol : 'GRA',
       quantity : 3,
       price : 2.00,
       type: 'buy',
-      date: '04/13/2009'
+      date: '04/13/2009',
+      total: 4.00
     },
     {
       symbol : 'GRB',
       quantity : 2,
       price : 2.00,
       type: 'buy',
-      date: '04/13/2009'
+      date: '04/13/2009',
+      total: 4.00
     },
     {
       symbol : 'GRC',
       quantity : 2,
       price : 2.00,
       type: 'buy',
-      date: '04/13/2009'
+      date: '04/13/2009',
+      total: 4.00
     },
     {
       symbol : 'GRD',
       quantity : 2,
       price : 2.00,
       type: 'buy',
-      date: '04/13/2009'
+      date: '04/13/2009',
+      total: 4.00
     },
     {
       symbol : 'GRE',
       quantity : 2,
       price : 2.00,
       type: 'buy',
-      date: '04/13/2009'
+      date: '04/13/2009',
+      total: 4.00
     },
     {
       symbol : 'GRF',
       quantity : 2,
       price : 2.00,
       type: 'sell',
-      date: '04/13/2009'
+      date: '04/13/2009',
+      total: 4.00
     },  
     {
       symbol : 'GRG',
       quantity : 2,
       price : 2.00,
       type: 'buy',
-      date: '04/13/2009'
+      date: '04/13/2009',
+      total: 4.00
     }
   ]
 
   return (
-    <div className='mt-5'>
-      <div className="grid grid-cols-1 sm:grid-cols-2 mx-4 gap-4">
-      {transactions !== "" && transactions.map((transaction) => {
-        const total = (transaction.price) * (transaction.quantity)
-        return (
-          <div className="bg-white space-y-3 p-4 rounded-lg shadow">
-            <div className="flex items-center space-x-2 text-lg">
-              <div className="text-gray-500">{transaction.date}</div>
-              <div>
-                {transaction.type == 'buy' ? 
-                <span
-                  className="p-1.5 text-base font-medium uppercase tracking-wider text-white bg-blue-900 rounded-lg bg-opacity-50">{transaction.type}
-                </span>
-                :
-                <span
-                  className="p-1.5 text-base font-medium uppercase tracking-wider text-black bg-red-500 rounded-lg bg-opacity-50">{transaction.type}
-                </span>}
-              </div>
-            </div>
-            <div className="text-lg text-gray-700">
-              {transaction.symbol} | P{transaction.price} | {transaction.quantity}
-            </div>
-            <div className="text-xl font-medium text-black">
-              P{total}
-            </div>
-          </div>
-        )
-      })}
+    <div className='p-10'>
+      <div className="p-5 h-screen bg-gray-100">
+
+      <div className="overflow-auto rounded-lg shadow hidden md:block">
+      <table className="w-full">
+        <thead className="bg-gray-50 border-b-2 border-gray-200">
+          <tr>
+          <th className="w-60 p-3 text-sm font-semibold tracking-wide text-left">Date</th>
+            <th className="w-90 p-3 text-sm font-semibold tracking-wide text-left">Stock</th>
+            <th className="w-90 p-3 text-sm font-semibold tracking-wide text-left">Quantity</th>
+            <th className="w-90 p-3 text-sm font-semibold tracking-wide text-left">Price</th>
+            <th className="w-90 p-3 text-sm font-semibold tracking-wide text-left">Total</th>
+            <th className="w-50 p-3"></th>
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-gray-100">
+        {transactions !== "" && transactions.map((transaction) => {
+          return (  
+            <tr className="bg-white" key={transaction.symbol}>
+              <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
+            {transaction.date}</td>
+            <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
+            {transaction.symbol}</td>
+            <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
+            {transaction.quantity}</td>
+            <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
+            {transaction.price}</td>
+            <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
+            {transaction.total}</td>   
+            <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
+            {transaction.type === 'buy' ?
+            <p className="p-3 text-xs font-medium uppercase tracking-wider text-center text-black bg-blue-700 rounded-md bg-opacity-50">BOUGHT</p>
+            :
+            <p className="p-3 text-xs font-medium uppercase tracking-wider text-center text-black bg-yellow-600 rounded-md bg-opacity-50">SOLD</p>}
+            </td>
+            
+          </tr>
+          )
+        })}
+        </tbody>
+      </table>
+      </div>
       </div>
     </div>
   )
