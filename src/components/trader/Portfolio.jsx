@@ -90,7 +90,7 @@ const Portfolio = () => {
       </div>
       <div className='mt-2 grid grid-cols-[85%_15%]'>
         <div></div>
-        <div className='grid grid-cols-2'>
+        <div className='grid grid-cols-2 bg-gray-200 border-b-2 border-gray-200'>
           <div className='text-left'><p>Investment Total:</p></div>
           <div className='text-center'><p>P2,560.50</p></div>
           <div className='text-left'><p>Balance:</p></div>
