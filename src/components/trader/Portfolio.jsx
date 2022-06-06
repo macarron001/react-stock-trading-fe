@@ -58,29 +58,29 @@ const Portfolio = () => {
     <div className="p-10 h-screen bg-gray-100">
 
       <div className="overflow-auto rounded-lg shadow hidden md:block">
-      <table class="w-full">
-        <thead class="bg-gray-50 border-b-2 border-gray-200">
+      <table className="w-full">
+        <thead className="bg-gray-50 border-b-2 border-gray-200">
           <tr>
-            <th class="w-60 p-3 text-sm font-semibold tracking-wide text-left">Stock</th>
-            <th class="w-60 p-3 text-sm font-semibold tracking-wide text-left">Company Name</th>
-            <th class="w-60 p-3 text-sm font-semibold tracking-wide text-left">Shares</th>
-            <th class="w-60 p-3 text-sm font-semibold tracking-wide text-left">Total</th>
-            <th class="w-10 p-3"></th>
+            <th className="w-60 p-3 text-sm font-semibold tracking-wide text-left">Stock</th>
+            <th className="w-60 p-3 text-sm font-semibold tracking-wide text-left">Company Name</th>
+            <th className="w-60 p-3 text-sm font-semibold tracking-wide text-left">Shares</th>
+            <th className="w-60 p-3 text-sm font-semibold tracking-wide text-left">Total</th>
+            <th className="w-10 p-3"></th>
           </tr>
         </thead>
-        <tbody class="divide-y divide-gray-100">
+        <tbody className="divide-y divide-gray-100">
         {stocks !== "" && stocks.map((stock) => {
           return (
-            <tr class="bg-white" key={stock.symbol}>
-            <td class="p-3 text-sm text-gray-700 whitespace-nowrap">
+            <tr className="bg-white" key={stock.symbol}>
+            <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
             {stock.symbol}</td>
-            <td class="p-3 text-sm text-gray-700 whitespace-nowrap">
+            <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
             {stock.company_name}</td>
-            <td class="p-3 text-sm text-gray-700 whitespace-nowrap">
+            <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
             {stock.price}</td>
-            <td class="p-3 text-sm text-gray-700 whitespace-nowrap">
+            <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
             {stock.price}</td>  
-            <td class="p-3 text-sm text-gray-700 whitespace-nowrap">
+            <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
             <button className='border w-20 my-1 py-1 text-[15px] bg-teal-600 hover:bg-emerald-300 text-white'>Sell Stock</button></td>
           </tr>
           )
