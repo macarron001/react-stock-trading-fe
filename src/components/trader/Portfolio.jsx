@@ -55,7 +55,7 @@ const Portfolio = () => {
   ]
 
   return (
-    <div className="p-5 h-screen bg-gray-100">
+    <div className="p-10 h-screen bg-gray-100">
 
       <div className="overflow-auto rounded-lg shadow hidden md:block">
       <table class="w-full">
@@ -81,12 +81,21 @@ const Portfolio = () => {
             <td class="p-3 text-sm text-gray-700 whitespace-nowrap">
             {stock.price}</td>  
             <td class="p-3 text-sm text-gray-700 whitespace-nowrap">
-            <button className='border w-20 my-1 py-1 bg-green-600 hover:bg-emerald-300 text-white'>Sell Stock</button></td>
+            <button className='border w-20 my-1 py-1 text-[15px] bg-teal-600 hover:bg-emerald-300 text-white'>Sell Stock</button></td>
           </tr>
           )
         })}
         </tbody>
       </table>
+      </div>
+      <div className='mt-2 grid grid-cols-[85%_15%]'>
+        <div></div>
+        <div className='grid grid-cols-2'>
+          <div className='text-left'><p>Investment Total:</p></div>
+          <div className='text-center'><p>P2,560.50</p></div>
+          <div className='text-left'><p>Balance:</p></div>
+          <div className='text-center'><p>P6,000.00</p></div>
+        </div>
       </div>
     </div>
   )
