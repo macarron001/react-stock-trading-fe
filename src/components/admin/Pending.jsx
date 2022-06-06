@@ -5,52 +5,52 @@ const Pending = () => {
     {
       email : 'test1@gmail.com',
       approved: false,
-      date: '04/13/2009'
+      created_at: '04/13/2009'
     },
     {
       email : 'test2@gmail.com',
       approved: false,
-      date: '04/13/2009'
+      created_at: '04/13/2009'
     },
     {
       email : 'test3@gmail.com',
       approved: false,
-      date: '04/13/2009'
+      created_at: '04/13/2009'
     },
     {
       email : 'test4@gmail.com',
       approved: false,
-      date: '04/13/2009'
+      created_at: '04/13/2009'
     },
     {
       email : 'test5@gmail.com',
       approved: false,
-      date: '04/13/2009'
+      created_at: '04/13/2009'
     },
     {
       email : 'test6@gmail.com',
       approved: false,
-      date: '04/13/2009'
+      created_at: '04/13/2009'
     },
     {
       email :'test7@gmail.com',
       approved: false,
-      date: '04/13/2009'
+      created_at: '04/13/2009'
     },
     {
       email : 'test8@gmail.com',
       approved: false,
-      date: '04/13/2009'
+      created_at: '04/13/2009'
     },
     {
       email : 'test9@gmail.com',
       approved: false,
-      date: '04/13/2009'
+      created_at: '04/13/2009'
     },  
     {
       email : 'test10@gmail.com',
       approved: false,
-      date: '04/13/2009'
+      created_at: '04/13/2009'
     }
   ]
 
@@ -74,7 +74,7 @@ const Pending = () => {
             <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
             {user.email}</td>
             <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
-            {user.date}</td>
+            {user.created_at}</td>
             <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
             {!user.approved ? "PENDING" : " "}
             </td>

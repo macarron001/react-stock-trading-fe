@@ -75,7 +75,7 @@ const Stocks = () => {
             <td className="p-3 text-sm text-center text-gray-700 whitespace-nowrap">
             {stock.company_name}</td>
             <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
-            {stock.price}</td>
+            ₱{stock.price}</td>
             <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
             <button className='border w-20 my-1 py-1 text-[15px] bg-emerald-600 hover:bg-indigo-900-300 mr-5'>Buy Stock</button>
             </td>

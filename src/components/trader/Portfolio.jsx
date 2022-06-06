@@ -92,9 +92,9 @@ const Portfolio = () => {
         <div></div>
         <div className='grid grid-cols-2 bg-gray-200 border-b-2 border-gray-200'>
           <div className='text-left'><p>Investment Total:</p></div>
-          <div className='text-center'><p>P2,560.50</p></div>
+          <div className='text-center'><p>₱2,560.50</p></div>
           <div className='text-left'><p>Balance:</p></div>
-          <div className='text-center'><p>P6,000.00</p></div>
+          <div className='text-center'><p>₱6,000.00</p></div>
         </div>
       </div>
     </div>

@@ -5,12 +5,13 @@ import Portfolio from "./components/trader/Portfolio";
 import Transactions from "./components/trader/Transactions";
 import Stocks from "./components/trader/Stocks"
 import Pending from "./components/admin/Pending"
+import Traders from "./components/admin/Traders"
 
 function App() {
   return (
     <>
       <Navbar />
-      <Pending />
+      <Traders />
     </>
   )
 }

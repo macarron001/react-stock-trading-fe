@@ -111,9 +111,9 @@ const Transactions = () => {
             <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
             {transaction.quantity}</td>
             <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
-            {transaction.price}</td>
+            ₱{transaction.price}</td>
             <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
-            {transaction.total}</td>   
+            ₱{transaction.total}</td>   
             <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
             {transaction.type === 'buy' ?
             <p className="p-3 text-xs font-medium uppercase tracking-wider text-center text-black bg-blue-700 rounded-md bg-opacity-50">BOUGHT</p>
