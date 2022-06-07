@@ -1,6 +1,9 @@
-import React from 'react'
+import { useState } from 'react'
+import Create from './Create'
 
 const Traders = () => {
+  const [creating, setCreating] = useState(false)
+  const handleClick = () => setCreating(!creating)
   const users = [
     {
       id: 1,
@@ -93,6 +96,10 @@ const Traders = () => {
         </tbody>
       </table>
       </div>
+      <div className="w-full flex justify-end">
+        <button onClick={handleClick} className='p-2.5 mt-5 mr-2 bg-yellow-500 hover:bg-yellow-300 border-black text-black relative hover:text-black'>Create Trader</button>
+      </div>
+      {creating && <Create setCreating={setCreating} />}
     </div>
   )
 }
